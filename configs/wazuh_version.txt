@@ -1,0 +1,1 @@
+Wazuh Version: 4.7.5

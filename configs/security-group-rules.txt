@@ -1,0 +1,13 @@
+Wazuh SIEM Security Group
+Date: 2025-12-20
+Security Group ID: sg-0abc1234def567890
+
+Inbound Rules:
+1. SSH      - TCP 22    - Source: 68.82.78.238/32
+2. HTTPS    - TCP 443   - Source: 68.82.78.238/32
+3. API      - TCP 55000 - Source: 68.82.78.238/32
+4. Agent    - TCP 1514  - Source: 68.82.78.238/32
+
+Notes:
+- All rules restricted to my IP
+- No public access

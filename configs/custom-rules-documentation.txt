@@ -1,0 +1,52 @@
+Custom Wazuh Detection Rules
+Created: 12/23/25
+
+=== RULE 1: SSH Brute Force Detection ===
+Rule ID: 100010
+Severity: High (Level 10)
+Trigger: 5 failed SSH attempts within 120 seconds
+MITRE ATT&CK: T1110 (Brute Force)
+
+Purpose:
+Detect brute force attacks by correlating multiple failed SSH 
+authentication attempts.
+
+Rule Logic:
+- Watches for rules 5710/5716 (SSH auth failures)
+- Triggers after 5 failures in 2 minutes
+- Raises high severity alert
+
+Discovery:
+During testing, found that Wazuh already has built-in rules 
+(5712, 5720, 5551) that detect SSH brute force. This shows 
+the importance of checking existing rules before creating 
+custom ones.
+
+Testing:
+- Generated 15+ failed SSH attempts
+- Verified detection in dashboard
+- Confirmed alerts generated within seconds EOF
+
+=== FILE INTEGRITY MONITORING ===
+Date: 12/23/25
+
+Monitored Directories:
+- /root/critical-files (database configs)
+- /opt/sensitive-data (API keys, credentials)
+
+Configuration:
+- Real-time monitoring enabled
+- Change reporting enabled
+- All attributes monitored (permissions, content, ownership)
+
+Tests Performed:
+1. Modified db-config.txt → DETECTED ✓
+2. Created aws-secret.txt → DETECTED ✓
+3. Deleted api-keys.txt → DETECTED ✓
+4. Changed permissions chmod 777 → DETECTED ✓
+
+Detection Time: All changes detected within 5-10 seconds
+
+Result: Successfully demonstrated real-time file integrity 
+monitoring capabilities. All unauthorized file modifications, 
+creations, and deletions were immediately detected and alerted.
