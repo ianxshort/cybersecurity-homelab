@@ -1,6 +1,8 @@
-# AWS Cloud SIEM homelab Cloud based Security 
+# AWS Cloud SIEM Homelab 
 
-This projects demonstrates the design, deployment, and operation of a cloud-based SIEM solution using Wazuh on AWS. The enviornment simulates a real-world security monitoring deployment, including multi-endpoint log ingestion, host-based intrusion detection, custom detection rule development, and file integrity monitoring (FIM) mapped to the MITRE ATT&CK framework.
+Cloud-based security monitoring and threat detection using Wazuh on AWS EC2.
+
+This project demonstrates the design, deployment, and operation of a cloud-based SIEM solution using Wazuh on AWS. The environment simulates a real-world security monitoring deployment, including multi-endpoint log ingestion, host-based intrusion detection, custom detection rule development, and file integrity monitoring (FIM) mapped to the MITRE ATT&CK framework.
 
 
 ## Objectives 
@@ -12,7 +14,7 @@ This projects demonstrates the design, deployment, and operation of a cloud-base
 - Map detections to MITRE ATT&CK techniques
 - Operate within resource-constrained cloud infrastructure
 
-
+---
 
 ## Architecture 
 
@@ -34,6 +36,7 @@ Platform Wazuh 4.7.5
 **Detection Framework**
 - MITRE ATT&CK
 
+---
 
 ## Use Case Implementations
 
@@ -94,7 +97,7 @@ Monitored Paths:
 - Tested detection of file creation, modification, deletion, and permission changes
 - All unauthorized changes detected within seconds with detailed before/after states
 
-
+---
 
 ## Accomplishments
 
@@ -105,6 +108,7 @@ Monitored Paths:
 - Analyzed security events and corresponding authentication failures 
 - Troubleshooted resource constraints such as memory and disk space within a cloud environment 
 
+---
 
 ## Screenshots 
 
@@ -154,7 +158,7 @@ Monitored Paths:
 ![FIM Alert Details](screenshots/14-fim-modification-alert-details.png)
 *Detailed FIM alert showing file attributes, hashes, and modification metadata*
 
-
+---
 
 ## Skills Displayed 
 
@@ -180,6 +184,7 @@ Monitored Paths:
 - Configuration debugging
 - Platform capability analysis
 
+---
 
 ## Main Takeaways
 
@@ -192,6 +197,7 @@ How to operate SIEM given a resource-limited environment highlighted the importa
     - Optimizing memory consumption
     - Understanding the dependencies of components
 
+---
 
 ## Future Enhancements 
 
@@ -200,6 +206,10 @@ How to operate SIEM given a resource-limited environment highlighted the importa
 - **Full attack chain scanning** -- initial access -> Privilege escalation -> Data exfiltration
 - **Different OS endpoint monitoring** -- Add a Windows server agent to display cross-platform coverage capability
 
+---
+
+**Project Completed:** December 2025  
+**Author:** Ian Shor
 
 
 
