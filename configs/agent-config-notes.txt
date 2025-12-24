@@ -1,0 +1,8 @@
+Wazuh Agent Configuration - MacBook
+
+Agent Name: macbook-homelab
+Status: Active
+Manager IP: 98.93.177.241
+Manager Port: 1514
+
+Installation Date: 12/22/25
