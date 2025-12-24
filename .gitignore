@@ -1,0 +1,18 @@
+# Sensitive Files
+*credentials*.txt
+*password*
+*.pem
+*.key
+wazuh-homelab-key.pem
+
+# Installation Files
+*.pkg
+*.deb
+*.rpm
+
+# Test Files
+test-activity/
+
+# System Files
+.DS_Store
+*.swp
